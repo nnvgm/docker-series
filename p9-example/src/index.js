@@ -9,4 +9,8 @@ ConnectDB(mongoURL);
 
 const app = express();
 
+app.get('/', function (req, res) {
+  res.json({ data: 'Hello docker' });
+});
+
 app.listen(port, () => console.log(`Server is running on port ${port}`));
